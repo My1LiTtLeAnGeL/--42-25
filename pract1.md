@@ -39,6 +39,8 @@
 +-----------------------+
 ```
 
+<img width="1280" height="800" alt="3 задание 1 практика" src="https://github.com/user-attachments/assets/182a93c5-8f4f-4ebd-a5bf-d66690deb441" />
+
 Перед отправкой решения проверьте его в ShellCheck на предупреждения.
 
 ## Задача 4
