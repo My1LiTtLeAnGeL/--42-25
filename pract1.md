@@ -53,6 +53,9 @@
 h hello include int main n printf return stdio void world
 ```
 
+<img width="1280" height="800" alt="4 задание 1 практика" src="https://github.com/user-attachments/assets/39e53eb5-74dd-4141-a1e4-3abd1449e546" />
+
+
 ## Задача 5
 
 Написать программу для регистрации пользовательской команды (правильные права доступа и копирование в /usr/local/bin).
