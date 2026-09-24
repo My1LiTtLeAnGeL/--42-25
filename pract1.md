@@ -25,6 +25,8 @@
 139 hip
 138 manet
 ```
+<img width="1280" height="800" alt="2 задание 1 практика" src="https://github.com/user-attachments/assets/5633bbfa-ba30-462e-ba93-c921317e990b" />
+
 
 ## Задача 3
 
