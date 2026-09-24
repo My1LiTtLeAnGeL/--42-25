@@ -8,7 +8,8 @@
 
 Вывести отсортированный в алфавитном порядке список имен пользователей в файле passwd (вам понадобится grep).
 
-<img width="1280" height="800" alt="1 пратика 1 задание" src="https://github.com/user-attachments/assets/ee1f3deb-2bec-42fc-95f2-8da8a16e5589" />
+<img width="1280" height="800" alt="1 задание 1 практика" src="https://github.com/user-attachments/assets/24f15bf5-22f2-4f62-b666-8aa03b247a39" />
+
 
 
 
