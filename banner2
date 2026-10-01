@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "Ошибка: Не указано имя файла."
+    echo "Использование: $0 <имя_скрипта>"
+    exit 1
+fi
+
+TARGET_FILE="$1"
+
+if [ ! -f "$TARGET_FILE" ]; then
+    echo "Ошибка: Файл '$TARGET_FILE' не найден."
+    exit 2
+fi
+
+echo "Регистрация команды '$TARGET_FILE'..."
+
+chmod 755 "$TARGET_FILE"
+
+sudo cp "$TARGET_FILE" /usr/local/bin/
+
+if [ $? -eq 0 ]; then
+    echo "Успех! Команда '$(basename "$TARGET_FILE")' доступна глобально."
+else
+    echo "Ошибка при копировании файла. Возможно, неверный пароль sudo."
+    exit 3
+fi
