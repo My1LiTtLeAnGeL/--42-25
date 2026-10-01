@@ -1,0 +1,32 @@
+#!/bin/bash
+
+for file in *.{c,js,py}; do
+
+    if [ ! -f "$file" ]; then
+        continue
+    fi
+
+    first_line=$(head -n 1 "$file")
+
+    has_comment=0
+
+    if [[ "$file" == *.c ]] || [[ "$file" == *.js ]]; then
+        if [[ "$first_line" =~ ^[[:space:]]*// ]]; then
+            has_comment=1
+        fi
+    fi
+
+    if [[ "$file" == *.py ]]; then
+        if [[ "$first_line" =~ ^[[:space:]]*# ]]; then
+            has_comment=1
+        fi
+    fi
+
+    if [ $has_comment -eq 1 ]; then
+        echo "[ OK ] В файле '$file' есть комментарий в первой строке."
+    else
+        echo "[WARN] В файле '$file' НЕТ комментария в первой строке!"
+    fi
+
+done
+
