@@ -17,9 +17,7 @@ echo "Регистрация команды '$TARGET_FILE'..."
 
 chmod 755 "$TARGET_FILE"
 
-sudo cp "$TARGET_FILE" /usr/local/bin/
-
-if [ $? -eq 0 ]; then
+if sudo cp "$TARGET_FILE" /usr/local/bin/; then
     echo "Успех! Команда '$(basename "$TARGET_FILE")' доступна глобально."
 else
     echo "Ошибка при копировании файла. Возможно, неверный пароль sudo."
