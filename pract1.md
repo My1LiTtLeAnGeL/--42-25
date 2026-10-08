@@ -101,6 +101,9 @@ h hello include int main n printf return stdio void world
 
 Написать программу, которая выводит названия всех пустых текстовых файлов в указанной директории. Директория передается в программу параметром. 
 
+<img width="1920" height="1080" alt="задание10" src="https://github.com/user-attachments/assets/2129411b-0c6a-44fd-8ba6-4df592de3ac1" />
+
+
 ## Полезные ссылки
 
 Линукс в браузере: https://bellard.org/jslinux/
