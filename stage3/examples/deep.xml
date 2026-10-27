@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vfs name="deep">
+  <file name="root.txt">корень</file>
+  <dir name="home">
+    <dir name="user">
+      <file name="a.txt">файл a</file>
+      <dir name="projects">
+        <dir name="python">
+          <file name="main.py">print("hi")</file>
+          <file name="data.bin" encoding="base64">AAECAwQF</file>
+        </dir>
+        <dir name="empty"/>
+      </dir>
+    </dir>
+  </dir>
+  <dir name="etc">
+    <file name="config">x=1</file>
+  </dir>
+</vfs>

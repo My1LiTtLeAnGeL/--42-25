@@ -1,0 +1,26 @@
+# этап 3: все режимы ls и cd на deep.xml (pwd показывает текущую папку; exit проверяется в start_basic.txt)
+# последняя строка специально с ошибкой: скрипт покажет ошибку и остановится
+ls
+ls /
+ls home
+ls home/user /etc
+ls /home/user/a.txt
+cd home
+cd user/projects
+pwd
+ls
+cd python
+ls
+cd ..
+ls
+cd ../..
+cd
+ls
+cd /home/user/projects/empty
+pwd
+ls
+cd ./..
+cd ../../..
+pwd
+ls
+cd nothing

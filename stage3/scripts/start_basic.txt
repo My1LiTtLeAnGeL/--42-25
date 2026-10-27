@@ -1,0 +1,9 @@
+# проверка парсера и команд на files.xml
+ls
+ls "my folder"
+ls docs "my folder" 'readme.txt'
+cd "my folder"
+cd ..
+cd docs
+cd /
+exit

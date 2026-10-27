@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vfs name="files">
+  <file name="readme.txt">Привет из VFS!</file>
+  <file name="notes.txt">заметки</file>
+  <file name="logo.bin" encoding="base64">iVBORw0KGgo=</file>
+  <dir name="docs"/>
+  <dir name="my folder"/>
+</vfs>
