@@ -1,0 +1,5 @@
+# проверка парсера и заглушек
+ls
+ls -l "my folder" 'a b'
+cd /tmp "dir with spaces"
+exit
