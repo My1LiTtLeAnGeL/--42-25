@@ -11,7 +11,7 @@ class VFSError(Exception):
 class File:
     def __init__(self, name, data):
         self.name = name
-        self.data = data  # bytes
+        self.data = data
         self.parent = None
         self.is_dir = False
 
@@ -19,7 +19,7 @@ class File:
 class Dir:
     def __init__(self, name):
         self.name = name
-        self.children = {}  # имя -> File или Dir
+        self.children = {}
         self.parent = None
         self.is_dir = True
 
@@ -37,7 +37,6 @@ class VFS:
         self.cwd = self.root
 
     def get_path(self):
-        # собираем путь от текущей папки вверх до корня
         parts = []
         node = self.cwd
         while node.parent is not None:
@@ -46,7 +45,6 @@ class VFS:
         return "/" + "/".join(reversed(parts))
 
     def resolve(self, path):
-        # находит узел по абсолютному или относительному пути
         node = self.root if path.startswith("/") else self.cwd
         for part in path.split("/"):
             if part == "" or part == ".":
