@@ -5,12 +5,12 @@ import shlex
 class Shell:
     def __init__(self, vfs):
         self.vfs = vfs
-        self.finished = False  # станет True после exit
+        self.finished = False
 
     def run(self, line):
         """Выполняет строку. Возвращает (текст_вывода, успешно_ли)."""
         try:
-            parts = shlex.split(line)  # умеет обрабатывать кавычки
+            parts = shlex.split(line)
         except ValueError:
             return "Ошибка парсера: не закрыта кавычка", False
         if not parts:
@@ -57,7 +57,7 @@ class Shell:
     def cmd_cd(self, args):
         if len(args) > 1:
             return "cd: слишком много аргументов", False
-        path = args[0] if args else "/"  # cd без аргументов - в корень
+        path = args[0] if args else "/"
         try:
             node = self.vfs.resolve(path)
         except Exception as e:
