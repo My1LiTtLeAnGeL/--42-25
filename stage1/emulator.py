@@ -17,11 +17,9 @@ class App:
     def __init__(self):
         self.shell = Shell()
         self.root = tk.Tk()
-        self.root.title("Эмулятор - VFS")  # в заголовке есть имя VFS
+        self.root.title("Эмулятор - VFS")
         self.root.geometry("720x460")
 
-        # сначала поле ввода (прижато вниз), потом окно вывода,
-        # иначе поле ввода может уехать за нижний край окна
         frame = tk.Frame(self.root)
         frame.pack(side="bottom", fill="x")
 
@@ -30,16 +28,13 @@ class App:
         self.output.pack(side="top", fill="both", expand=True)
 
         tk.Label(frame, text=PROMPT, font=("Courier", 11)).pack(side="left")
-        # тёмное поле ввода с белым текстом и белым курсором, чтобы его было видно
         self.entry = tk.Entry(frame, font=("Courier", 11), bg="#303030", fg="white",
                               insertbackground="white", relief="sunken", bd=3)
         self.entry.pack(side="left", fill="x", expand=True)
         self.entry.bind("<Return>", self.on_enter)
 
-        # клик по окну вывода возвращает курсор в поле ввода
         self.output.bind("<Button-1>", lambda e: self.entry.after(1, self.entry.focus_force))
 
-        # поднимаем окно поверх остальных и отдаём фокус полю ввода
         self.root.lift()
         self.root.attributes("-topmost", True)
         self.root.after(300, lambda: self.root.attributes("-topmost", False))
